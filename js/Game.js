@@ -43,11 +43,11 @@ class Game {
          const overLay = document.getElementById('overlay');
          if (gameWon) {
             document.getElementById('game-over-message').innerHTML = 'You Are Smart , Keep It Going !';
-            overLay.classList.add('win');
+            overLay.className = 'win';
             overLay.style.display = '';
          } else {
             document.getElementById('game-over-message').innerHTML = 'Out Of Guesses , Try Again?';
-            overLay.classList.add('lose');
+            overLay.className = 'lose';
             overLay.style.display='';
          }
          this.resetGame();

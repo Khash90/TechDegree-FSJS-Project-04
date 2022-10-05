@@ -8,7 +8,7 @@ btnReset.addEventListener('click', (e)=> {
     game.startGame();
 });
 
-//Event listener for keyboard clicks
+//Event listener for letter clicks
 const keyboard = document.getElementById("qwerty");
 keyboard.addEventListener("click", (e) => {
   if (e.target.className === "key") {
@@ -16,14 +16,31 @@ keyboard.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("keyup", (e) => {
-    const keys = document.querySelectorAll(".key");
-    keys.forEach((button) => {
-      if (e.key === button.textContent) {
-        game.handleInteraction(button);
-      }
-    });
-  });
+// document.addEventListener("keyup", (e) => {
+//     const keys = document.querySelectorAll(".key");
+//     keys.forEach((button) => {
+//       if (e.key === button.textContent) {
+//         game.handleInteraction(button);
+//       }
+//     });
+//   });
+
+  const button = document.getElementsByClassName('key');
+  document.addEventListener('keyup', (e) => {
+    
+    if (overlay.style.display == 'none') {
+        for (let i=0; i<button.length; i++) {
+            if (button[i].textContent === e.key && button[i].disabled == false) {
+                game.handleInteraction(button[i]);
+                
+            } 
+            
+        }
+    } else if (overlay.style.display == 'flex') {
+        onkeyup = null;
+    }
+    
+});
 
 // const phrase = new Phrase('Life is like a box of chocolates');
 // console.log(`Phrase - phrase: ${phrase.phrase}`);
