@@ -13,15 +13,18 @@ class Game {
         ];
         this.activePhrase = null;
     }
+    //setting randomphrase every time you want to play
     getRandomPhrase() {
         const randomPhrase = Math.floor(Math.random() * this.phrases.length);
         return this.phrases[randomPhrase];
       }
+      //hiding the overlay at the start
       startGame(){
         document.getElementById("overlay").style.display = "none";
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
       }
+      //method for Win , it returns booleans true or false
       checkForWin(){
         const hideChars = document.getElementsByClassName('hide');
         if (hideChars.length === 0){
@@ -30,6 +33,7 @@ class Game {
             return false;
         }
       }
+      //if player make wrong guess remove one heart
       removeLife(){
          const hearts = document.querySelectorAll('img');
          if (this.missed < 4) {
@@ -39,6 +43,7 @@ class Game {
             this.gameOver();
          }
       }
+      // setting the overlay to show when player win or lose
       gameOver(gameWon){
          const overLay = document.getElementById('overlay');
          if (gameWon) {
