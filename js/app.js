@@ -16,14 +16,6 @@ keyboard.addEventListener("click", (e) => {
   }
 });
 
-// document.addEventListener("keyup", (e) => {
-//     const keys = document.querySelectorAll(".key");
-//     keys.forEach((button) => {
-//       if (e.key === button.textContent) {
-//         game.handleInteraction(button);
-//       }
-//     });
-//   });
 
   const button = document.getElementsByClassName('key');
   document.addEventListener('keyup', (e) => {
@@ -32,14 +24,11 @@ keyboard.addEventListener("click", (e) => {
         for (let i=0; i<button.length; i++) {
             if (button[i].textContent === e.key && button[i].disabled == false) {
                 game.handleInteraction(button[i]);
-                
             } 
-            
         }
     } else if (overlay.style.display == 'flex') {
         onkeyup = null;
     }
-    
 });
 
 // const phrase = new Phrase('Life is like a box of chocolates');
