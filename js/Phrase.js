@@ -5,6 +5,7 @@ class Phrase {
     constructor(phrase){
         this.phrase = phrase.toLowerCase();
     }
+    //creating li for phrases
     addPhraseToDisplay(){
         const charArr = this.phrase.split("");
          charArr.forEach((character) => {
@@ -24,7 +25,7 @@ class Phrase {
     checkLetter(letter) {
         return this.phrase.includes(letter);
       }
-      //Displays passed letter on screen after a match is found
+      //when letter is matched it gets displayed on the screen
       showMatchedLetter(letter) {
         const matched = document.querySelectorAll(".letter");
         if (this.checkLetter(letter)) {

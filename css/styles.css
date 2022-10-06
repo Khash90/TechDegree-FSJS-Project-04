@@ -50,9 +50,9 @@ button {
   margin: 6px;
   border: 1px solid transparent;
   padding: .5rem 1rem;
-  color: var(--color-keys);
+  color: white;
   font-size: var(--font-size-medium);
-  background-color: var(--color-keys-light);
+  background-color: rgb(6, 34, 50);
   border-radius: 5px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -64,7 +64,9 @@ button {
 	width: 200px;
 	margin: 0 auto;
 }
-
+.key:hover{
+  cursor: pointer;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -72,7 +74,9 @@ button {
   height: 100%;
   max-height: 900px;
   text-align: center;
+  background-color: #051a33;
 }
+
 
 .section {
   width: 100%;
@@ -81,6 +85,7 @@ button {
 
 #phrase ul li{
   margin-top: 15px;
+
 }
 
 /* Title */
@@ -99,7 +104,7 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
-  background: var(--color-neutral-light);
+  background: rgb(51, 51, 64);
   border-radius: 5px;
 }
 
@@ -145,8 +150,9 @@ button {
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
-  border-radius: 5px;
+  background: #17092e;
+  background-color: #17092e;
+  border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
   border-bottom: solid 4px rgba(0, 0, 0, .3);
@@ -180,7 +186,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #220707;
 }
 
 .start a {
@@ -188,7 +194,7 @@ button {
 }
 
 .win {
-  background-color: var(--color-win);
+  background-color: rgb(50, 56, 17);
 }
 
 .win a {
@@ -196,7 +202,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #6f1f0f;
 }
 
 .lose a {
