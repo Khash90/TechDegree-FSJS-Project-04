@@ -71,6 +71,7 @@ class Game {
           this.removeLife();
         }
       }
+      //reseting buttons , phrases and hearts.
       resetGame() {
         const phrase = document.getElementById("phrase");
         const keys = document.querySelectorAll(".key");
