@@ -4,6 +4,7 @@
 class Game {
     constructor(){
         this.missed = 0;
+        //the phrases for player to guess
         this.phrases = [
            new Phrase("never give up"),
            new Phrase('hard work works'),
@@ -57,6 +58,8 @@ class Game {
          }
          this.resetGame();
       }
+      /*Checks to see if the onscreen keyboard button clicked by the player matches a letter in the phrase, 
+     and then directs the game based on a correct or incorrect guess*/
       handleInteraction(button) {
         button.disabled = true;
         if (this.activePhrase.checkLetter(button.textContent)) {

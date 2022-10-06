@@ -16,3 +16,9 @@ and I have to say overal the entire project was a challenge , and im glad we did
 
 *about the project*:
 basically this is a game web app where random phrases gets selected and the player have 5 guesses to guess the phrase , each time the user make a wrong guess one life (heart pictures) gets removed , also you can choose the letters by pressing the keyboard letters not only clicking them with mouse. 
+
+
+
+Name : Khashayar Mirbabaie
+Date : 2022/Oct/06
+

@@ -5,7 +5,7 @@ class Phrase {
     constructor(phrase){
         this.phrase = phrase.toLowerCase();
     }
-    //creating li for phrases
+    //creating li for place holders also including space class 
     addPhraseToDisplay(){
         const charArr = this.phrase.split("");
          charArr.forEach((character) => {

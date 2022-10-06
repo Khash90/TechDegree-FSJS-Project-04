@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  margin: 0;
 }
 
 li, ol, ul {
@@ -75,6 +76,7 @@ button {
   max-height: 900px;
   text-align: center;
   background-color: #051a33;
+  margin: 0;
 }
 
 
